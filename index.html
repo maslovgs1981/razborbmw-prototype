@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Разбор BMW — ремонт и продажа двигателей BMW, Москва и МО</title>
+<meta name="description" content="Ремонт двигателей BMW, контрактные двигатели б/у с гарантией, выкуп BMW и запчасти с разборки. Москва, Одинцово, Кузовлево.">
+<style>
+:root{--bg:#0f1012;--panel:#17191c;--panel2:#1e2125;--line:#2a2e33;--text:#ececec;--muted:#9aa0a6;--m1:#5ab4e5;--m2:#1f3f8f;--m3:#e2231a;--accent:#2f6fd6}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 "Segoe UI",Roboto,Arial,sans-serif}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.mstripe{height:4px;background:linear-gradient(90deg,var(--m1) 0 33.3%,var(--m2) 33.3% 66.6%,var(--m3) 66.6%)}
+header{position:sticky;top:0;z-index:20;background:rgba(15,16,18,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:24px;height:64px}
+.logo{font-weight:800;letter-spacing:.5px;font-size:19px;display:flex;align-items:center;gap:10px}
+.logo i{display:inline-block;width:26px;height:14px;background:linear-gradient(90deg,var(--m1) 0 33%,var(--m2) 33% 66%,var(--m3) 66%);transform:skewX(-20deg)}
+nav{display:flex;gap:20px;font-size:14px;color:var(--muted);flex:1}
+nav a:hover{color:#fff}
+.phone{font-weight:700;white-space:nowrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;cursor:pointer;border-radius:8px;padding:12px 20px;font:600 15px/1 inherit;font-family:inherit;background:var(--accent);color:#fff;transition:.2s}
+.btn:hover{background:#3d7ff0}
+.btn.ghost{background:transparent;border:1px solid #3a3f45;color:var(--text)}
+.btn.ghost:hover{border-color:var(--m1)}
+/* hero */
+.hero{position:relative;overflow:hidden;background:radial-gradient(1200px 500px at 75% 30%,#262a30 0,#121315 60%)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;padding-top:44px;padding-bottom:56px}
+.rates{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px}
+.rate{display:flex;align-items:center;gap:10px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:8px 14px;font-size:14px}
+.rate b{font-size:15px}.rate .st{color:#f5c518;letter-spacing:1px}
+.rate .src{font-weight:800}.avito{color:#00aaff}.ymap{color:#fc3f1d}
+h1{font-size:46px;line-height:1.08;margin:0 0 16px;font-weight:800;letter-spacing:-.5px}
+h1 span{color:var(--m1)}
+.lead{color:var(--muted);font-size:17px;max-width:540px;margin:0 0 26px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.facts{display:flex;gap:28px;margin-top:30px;flex-wrap:wrap}
+.facts div{border-left:3px solid var(--m2);padding-left:12px}
+.facts b{display:block;font-size:20px}.facts small{color:var(--muted)}
+.photo{position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#dfe3e6}
+.photo img{display:block;width:100%;height:auto;filter:grayscale(.15) contrast(1.05)}
+.photo .tag{position:absolute;left:12px;bottom:12px;background:rgba(15,16,18,.85);border-radius:8px;padding:6px 10px;font-size:13px}
+/* engine picker */
+.picker{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px;margin-top:18px}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.tabs button{background:var(--panel2);border:1px solid var(--line);color:var(--muted);border-radius:6px;padding:6px 10px;font:600 13px inherit;font-family:inherit;cursor:pointer}
+.tabs button.on{background:var(--m2);border-color:var(--m1);color:#fff}
+.pk{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center}
+.code{font-size:40px;font-weight:800;line-height:1}
+.code small{display:block;font-size:12px;color:var(--muted);font-weight:500;margin-top:4px}
+.cyl{display:flex;gap:7px;align-items:flex-end;height:58px;justify-content:flex-end}
+.cyl span{width:16px;height:52px;position:relative;background:linear-gradient(#24282d,#1a1d21);border:1px solid #2f343a;border-radius:3px}
+.cyl span::after{content:"";position:absolute;left:1px;right:1px;height:14px;top:4px;border-radius:2px;background:linear-gradient(#cfd5db,#8b939b);animation:pist .9s ease-in-out infinite alternate}
+.cyl span:nth-child(odd)::after{animation-delay:-.45s}
+@keyframes pist{to{top:34px}}
+.prices{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}
+.prices div{background:var(--panel2);border-radius:8px;padding:10px 12px}
+.prices small{color:var(--muted);font-size:12px}.prices b{display:block;font-size:19px}
+/* sections */
+section{padding:64px 0}
+h2{font-size:32px;margin:0 0 8px}
+.sub{color:var(--muted);margin:0 0 28px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px;transition:.2s;display:block}
+a.card:hover{border-color:var(--m1);transform:translateY(-2px)}
+.card h3{margin:0 0 8px;font-size:19px}
+.card p{margin:0 0 14px;color:var(--muted);font-size:15px}
+.card .url{font-size:12px;color:var(--m1);font-family:Consolas,monospace}
+.card .pr{font-weight:700}
+.alt{background:#131417;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.offer{display:flex;flex-direction:column}
+.offer .img{height:140px;border-radius:10px;margin-bottom:14px;background:#d9dde1 url(engine.jpg) center/contain no-repeat}
+.offer .row{display:flex;justify-content:space-between;align-items:center;margin-top:auto}
+.av{font-size:13px;color:#00aaff;font-weight:700}
+.feed .meta{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);margin-bottom:8px}
+.feed .meta b{background:#7b5cff;color:#fff;border-radius:5px;padding:2px 7px;font-size:12px}
+.revs .card{display:flex;flex-direction:column;gap:6px}
+.revs .head{display:flex;justify-content:space-between;font-size:14px}
+.steps{counter-reset:s}
+.steps .card h3::before{counter-increment:s;content:"0" counter(s);display:block;color:var(--m1);font-size:13px;margin-bottom:6px}
+.contacts{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+footer{padding:36px 0 48px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+.sitemap{columns:4;column-gap:20px;font-size:13px;margin:14px 0 22px}
+.sitemap a{display:block;padding:2px 0;color:#8aa9c8}
+.sitemap a:hover{color:#fff}
+/* modal */
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.65);display:none;align-items:center;justify-content:center;z-index:50;padding:16px}
+.modal.on{display:flex}
+.box{background:var(--panel);border:1px solid var(--line);border-radius:16px;max-width:420px;width:100%;padding:24px;position:relative}
+.box h3{margin:0 0 4px;font-size:22px}.box p{color:var(--muted);margin:0 0 18px;font-size:14px}
+.ch{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px}
+.ch a{display:flex;align-items:center;gap:10px;background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:12px;font-weight:600}
+.ch a:hover{border-color:var(--m1)}
+.dot{width:10px;height:10px;border-radius:50%}
+.box input{width:100%;background:#0f1012;border:1px solid var(--line);border-radius:8px;color:var(--text);padding:12px;font:15px inherit;font-family:inherit;margin-bottom:10px}
+.x{position:absolute;right:14px;top:10px;background:none;border:0;color:var(--muted);font-size:26px;cursor:pointer}
+.ok{display:none;color:#7fd17f;font-size:14px;margin-top:8px}
+@media(max-width:900px){.hero .wrap{grid-template-columns:1fr}.grid,.contacts{grid-template-columns:1fr}nav{display:none}h1{font-size:34px}.sitemap{columns:2}.phone{display:none}}
+</style>
+</head>
+<body>
+<div class="mstripe"></div>
+<header><div class="wrap bar">
+  <a class="logo" href="#"><i></i>Разбор BMW</a>
+  <nav><a href="#napr">Ремонт двигателей</a><a href="#avito">Двигатели б/у</a><a href="#napr">Выкуп</a><a href="#avito">Запчасти</a><a href="#kontakty">Контакты</a></nav>
+  <a class="phone" href="tel:+79167016393">+7 (916) 701-63-93</a>
+  <button class="btn" data-open>Связаться</button>
+</div></header>
+
+<div class="hero"><div class="wrap">
+  <div>
+    <div class="rates">
+      <a class="rate" href="#otzyvy"><span class="src avito">Авито</span><span class="st">★★★★★</span><b>отзывы</b></a>
+      <a class="rate" href="#otzyvy"><span class="src ymap">Яндекс Карты</span><span class="st">★★★★★</span><b>отзывы</b></a>
+    </div>
+    <h1>Двигатели BMW: <span>ремонт</span>, контрактные, выкуп</h1>
+    <p class="lead">Свой моторный цех, разборка и склад. Ремонтируем N13–S63, продаём проверенные б/у двигатели с гарантией до 60 дней, выкупаем BMW и ДВС.</p>
+    <div class="cta"><button class="btn" data-open>Узнать цену ремонта</button><a class="btn ghost" href="#avito">Двигатели и запчасти с Авито</a></div>
+    <div class="facts"><div><b>с 2014</b><small>работаем с BMW</small></div><div><b>до 60 дней</b><small>гарантия на б/у</small></div><div><b>3 адреса</b><small>Москва и МО</small></div></div>
+  </div>
+  <div>
+    <div class="photo"><img src="engine.jpg" alt="Двигатель BMW V8"><span class="tag">Здесь будет фото вашего цеха и моторов</span></div>
+    <div class="picker">
+      <div class="tabs" id="tabs"></div>
+      <div class="pk"><div class="code" id="code"></div><div class="cyl" id="cyl"></div></div>
+      <div class="prices"><div><small>Ремонт</small><b id="rep"></b></div><div><small>Контрактный ДВС</small><b id="buy"></b></div></div>
+    </div>
+  </div>
+</div></div>
+
+<section id="napr"><div class="wrap">
+  <h2>Направления</h2>
+  <p class="sub">Каждое направление открывает свою страницу. Адреса страниц остаются прежними, чтобы позиции в Яндексе не просели.</p>
+  <div class="grid">
+    <a class="card" href="#"><h3>Ремонт двигателей BMW</h3><p>Капитальный ремонт, цепи ГРМ, маслосъёмные колпачки, N20, N47, N55, N57, N63, S63.</p><span class="pr">от 60 000 ₽</span><br><span class="url">/avtoservis-bmw</span></a>
+    <a class="card" href="#"><h3>Двигатели б/у BMW</h3><p>Контрактные двигатели с разборки, проверенные, гарантия до 60 дней.</p><span class="pr">от 110 000 ₽</span><br><span class="url">/dvigatel-bmw</span></a>
+    <a class="card" href="#"><h3>Выкуп BMW и ДВС</h3><p>Выкупаем автомобили BMW, двигатели и разборки, быстрая оценка по фото.</p><span class="pr">оценка по фото</span><br><span class="url">/vykup-bmw</span></a>
+    <a class="card" href="#"><h3>Замена цепи ГРМ N47, N57</h3><p>Замена цепей и натяжителей на дизельных моторах.</p><span class="pr">цена по осмотру</span><br><span class="url">/zamena-cepi-grm-bmw-n57</span></a>
+    <a class="card" href="#"><h3>Запчасти с разборки</h3><p>Б/у запчасти на 1–7 серию, X, GT, i, Z4. Запрос по VIN.</p><span class="pr">запрос по VIN</span><br><span class="url">/zapchasti-bmw</span></a>
+    <a class="card" href="#"><h3>Ремонт рулевых реек</h3><p>Ремонт электрореек BMW.</p><span class="pr">цена по осмотру</span><br><span class="url">/remont-rulevyx-reek-bmw</span></a>
+  </div>
+</div></section>
+
+<section id="avito" class="alt"><div class="wrap">
+  <h2>Актуальные предложения с Авито</h2>
+  <p class="sub">Объявления из ваших двух аккаунтов Авито появляются здесь сами, без корзины: кнопка ведёт на объявление или в мессенджер со ссылкой на товар.</p>
+  <div class="grid" id="offers"></div>
+</div></section>
+
+<section id="raboty"><div class="wrap feed">
+  <h2>Выполненные работы из канала MAX</h2>
+  <p class="sub">Пост в канале MAX, Telegram или ВК сам появляется на сайте с фото.</p>
+  <div class="grid">
+    <div class="card"><div class="meta"><b>MAX</b>пост из канала</div><h3>Собрали N63 после замены цепей и колпачков</h3><p>Фото и текст поста подтягиваются автоматически.</p></div>
+    <div class="card"><div class="meta"><b style="background:#2aabee">Telegram</b>пост из канала</div><h3>Гильзовка блока N55</h3><p>Новые посты сверху, старые уходят в архив работ.</p></div>
+    <div class="card"><div class="meta"><b style="background:#0077ff">ВК</b>пост из группы</div><h3>Поступили контрактные N47 и N57</h3><p>Каждый пост получает свою страницу и попадает в поиск.</p></div>
+  </div>
+</div></section>
+
+<section id="otzyvy" class="alt"><div class="wrap revs">
+  <h2>Отзывы</h2>
+  <p class="sub">Подтягиваются с Авито и Яндекс Карт, рейтинг обновляется сам.</p>
+  <div class="grid">
+    <div class="card"><div class="head"><b class="avito">Авито</b><span class="st" style="color:#f5c518">★★★★★</span></div><p>Отзывы покупателей двигателей и запчастей из ваших аккаунтов.</p></div>
+    <div class="card"><div class="head"><b class="ymap">Яндекс Карты</b><span class="st" style="color:#f5c518">★★★★★</span></div><p>Отзывы клиентов автосервиса с карточки организации.</p></div>
+    <div class="card"><div class="head"><b>Как работаем</b><span></span></div><p>Звонок или сообщение → диагностика → согласование цены → ремонт → выдача с гарантией.</p></div>
+  </div>
+</div></section>
+
+<section id="kontakty"><div class="wrap">
+  <h2>Контакты</h2>
+  <p class="sub">Телефон и мессенджеры: <a href="tel:+79167016393"><b>+7 (916) 701-63-93</b></a> · razborbmw.msk@yandex.ru</p>
+  <div class="contacts">
+    <div class="card"><h3>Автосервис и офис</h3><p>Московская область, с. Кузовлево, д. 24</p></div>
+    <div class="card"><h3>Склад и выдача</h3><p>г. Одинцово, ул. Северная, д. 31</p></div>
+    <div class="card"><h3>Склад и выдача</h3><p>г. Москва, Каширское шоссе, вл. 148</p></div>
+  </div>
+  <div style="margin-top:22px"><button class="btn" data-open>Связаться</button></div>
+</div></section>
+
+<footer><div class="wrap">
+  <b style="color:var(--text)">Все страницы сайта остаются на своих адресах</b>
+  <div class="sitemap" id="sitemap"></div>
+  <div class="mstripe" style="margin-bottom:14px"></div>
+  © 2014–2026 RazborBMW.msk.ru · Не является официальным дилером BMW
+</div></footer>
+
+<div class="modal" id="modal"><div class="box">
+  <button class="x" data-close aria-label="Закрыть">×</button>
+  <h3>Связаться</h3>
+  <p>Выберите, как удобнее: перезвоним или напишите в мессенджер.</p>
+  <div class="ch">
+    <a href="https://t.me/+79167016393" target="_blank" rel="noopener"><span class="dot" style="background:#2aabee"></span>Telegram</a>
+    <a href="https://wa.me/79167016393" target="_blank" rel="noopener"><span class="dot" style="background:#25d366"></span>WhatsApp</a>
+    <a href="https://max.ru/" target="_blank" rel="noopener"><span class="dot" style="background:#7b5cff"></span>MAX</a>
+    <a href="tel:+79167016393"><span class="dot" style="background:var(--m3)"></span>Позвонить</a>
+  </div>
+  <form id="cb"><input id="ph" type="tel" placeholder="Ваш телефон" required><input placeholder="Двигатель или вопрос, например N57, цепь ГРМ"><button class="btn" style="width:100%">Перезвоните мне</button><div class="ok" id="ok">Готово: заявка с адресом страницы уйдёт вам в Telegram и MAX.</div></form>
+</div></div>
+
+<script>
+const E={N13:['1.6 бензин',60,170],N20:['2.0 бензин',60,160],N47:['2.0 дизель',170,170],N55:['3.0 бензин',100,230],N57:['3.0 дизель',200,200],N63:['4.4 V8 бензин',160,200],S63:['4.4 V8 M',180,300]};
+const tabs=document.getElementById('tabs');
+function show(k){const e=E[k];document.getElementById('code').innerHTML=k+'<small>'+e[0]+'</small>';document.getElementById('rep').textContent='от '+e[1]+' 000 ₽';document.getElementById('buy').textContent='от '+e[2]+' 000 ₽';const n=k.endsWith('63')?8:(k=='N13'||k=='N20'||k=='N47')?4:6;document.getElementById('cyl').innerHTML='<span></span>'.repeat(n);[...tabs.children].forEach(b=>b.classList.toggle('on',b.textContent==k))}
+Object.keys(E).forEach(k=>{const b=document.createElement('button');b.textContent=k;b.onclick=()=>show(k);tabs.append(b)});show('N57');
+document.getElementById('offers').innerHTML=Object.keys(E).slice(1,7).map(k=>`<a class="card offer" href="#"><div class="img"></div><h3>Двигатель BMW ${k}</h3><p>${E[k][0]}, с разборки, проверен</p><div class="row"><span class="pr">от ${E[k][2]} 000 ₽</span><span class="av">Авито →</span></div></a>`).join('');
+const pages=['/avtoservis-bmw','/remont-bmw-n20b20','/remont-dvigatelya-bmw-n55b30','/remont-dvigatelya-bmw-n63b44a','/remont-dvigatelya-bmw-s63b44b','/zamena-cepi-grm-bmw-n57','/remont-rulevyx-reek-bmw','/dvigatel-bmw','/dvigatel-bu-n63-n55-n20','/vykup-bmw','/vykup-dvs-bmw-n63-n55-n52-n20-n57-n47','/vykup-razborok-bmw','/vykup-avtozapchastej-i-avtomobilej-bmw','/zakupka-bu-zapchastej-bmw','/razborka-bmw','/zapchasti-bmw','/zakaz-na-razborke-bmw','/catalog','/shop','/vin','/kak-iskat-zapchasti','/bmw-m-power','/bmw-m-style','/restyling-bmw','/salon-bmw','/new-headlights-bmw','/vneshnij-i-vnutrennij-tyuning-bmw','/ceny-na-raboty','/osnovnye-napravleniya','/otdelenija','/contacts','/o-nas','/faqs-bmw','/dostavka','/oplata','/garantiya','/vozvrat','/category/novosti-bmw'];
+document.getElementById('sitemap').innerHTML=pages.map(p=>`<a href="#">${p}</a>`).join('');
+const m=document.getElementById('modal');document.querySelectorAll('[data-open]').forEach(b=>b.onclick=()=>m.classList.add('on'));
+m.onclick=e=>{if(e.target===m||e.target.hasAttribute('data-close'))m.classList.remove('on')};
+document.getElementById('cb').onsubmit=e=>{e.preventDefault();document.getElementById('ok').style.display='block'};
+</script>
+</body>
+</html>
